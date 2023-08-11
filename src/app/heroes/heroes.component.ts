@@ -13,8 +13,14 @@ import {HEROES} from '../mok-heroes';
 export class HeroesComponent implements OnInit {
   
 @Input() hero!:Hero;
+even:boolean=false
 // heroes = HEROES;
   constructor() { }
+
+  getEven(){
+
+    return this.hero.id%2!=0
+  }
 
   ngOnInit() {
   }
